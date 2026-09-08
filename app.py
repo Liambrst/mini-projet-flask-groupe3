@@ -10,10 +10,22 @@ def charger_donnees():
 @app.route("/")
 def index():
     donnees = charger_donnees()
-
+# Récupération du paramètre de recherche dans l'URL
+    recherche = request.args.get("recherche")
+    
+    # Si une recherche est tapée, on filtre la liste
+    if recherche:
+        recherche = recherche.lower()
+        donnees = [
+            item for item in donnees 
+            if recherche in item.get("natureEquipement", "").lower() 
+            or recherche in item.get("ipv4", "")
+        ]
+        
     return render_template(
         "index.html",
-        donnees=donnees
+        donnees=donnees,
+        recherche=recherche
     )
 
 @app.route("/detail/<int:id>")
