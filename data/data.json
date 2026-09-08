@@ -1,0 +1,62 @@
+[
+    {
+        "id": 101,
+        "reference": "RES-CCNA-01",
+        "titre": "Introduction aux réseaux informatiques",
+        "auteur": "Claire Martin",
+        "domaine": "Réseaux",
+        "anneePublication": 2023,
+        "disponibilite": "Disponible",
+        "rayon": "Réseaux - R01"
+    },
+    {
+        "id": 102,
+        "reference": "DEV-PY-02",
+        "titre": "Python pour les débutants",
+        "auteur": "Thomas Bernard",
+        "domaine": "Programmation",
+        "anneePublication": 2022,
+        "disponibilite": "Emprunté",
+        "rayon": "Développement - D03"
+    },
+    {
+        "id": 103,
+        "reference": "SEC-ISO-03",
+        "titre": "Les fondamentaux de la cybersécurité",
+        "auteur": "Sophie Durand",
+        "domaine": "Cybersécurité",
+        "anneePublication": 2024,
+        "disponibilite": "Disponible",
+        "rayon": "Sécurité - S02"
+    },
+    {
+        "id": 104,
+        "reference": "WEB-JS-04",
+        "titre": "Développer des applications web modernes",
+        "auteur": "Julien Moreau",
+        "domaine": "Développement web",
+        "anneePublication": 2021,
+        "disponibilite": "Réservé",
+        "rayon": "Web - W01"
+    },
+    {
+        "id": 105,
+        "reference": "SYS-LNX-05",
+        "titre": "Administrer un serveur Linux",
+        "auteur": "Nicolas Petit",
+        "domaine": "Systèmes",
+        "anneePublication": 2020,
+        "disponibilite": "Disponible",
+        "rayon": "Systèmes - S05"
+    },
+    {
+        "id": 106,
+        "reference": "BDD-SQL-06",
+        "titre": "SQL et conception de bases de données",
+        "auteur": "Émilie Robert",
+        "domaine": "Bases de données",
+        "anneePublication": 2023,
+        "disponibilite": "Indisponible",
+        "rayon": "Données - B02"
+    }
+]
