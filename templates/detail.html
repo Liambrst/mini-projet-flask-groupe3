@@ -1,26 +1,51 @@
 {% extends "base.html" %}
 
-{% block title %}Détail{% endblock %}
+{% block title %}Détail — {{ equipement.hostname }}{% endblock %}
 
 {% block content %}
 
-<h2>{{ element.reference }}</h2>
+<a href="/" class="btn-retour"><i class="fa-solid fa-arrow-left"></i> Retour à la liste</a>
 
 <div class="detail">
 
-    <p>
-        {{ element.titre }}
-    </p>
+    <h2><i class="fa-solid fa-server"></i> {{ equipement.hostname }}</h2>
 
-    <p>
-        <strong>Disponibilité :</strong>
-        {{ element.disponibilite }}
-    </p>
+    <div class="detail-ligne">
+        <i class="fa-solid fa-tag"></i>
+        <span><strong>Type :</strong> {{ equipement.natureEquipement }}</span>
+    </div>
+
+    <div class="detail-ligne">
+        <i class="fa-solid fa-location-dot"></i>
+        <span><strong>Zone :</strong> {{ equipement.zoneTechnique }}</span>
+    </div>
+
+    <div class="detail-ligne">
+        <i class="fa-solid fa-industry"></i>
+        <span><strong>Fabricant :</strong> {{ equipement.fabricant }}</span>
+    </div>
+
+    <div class="detail-ligne etat-wrapper">
+        <strong>État :</strong>
+        {% if equipement.etatLiaison == 'Actif' %}
+            <span class="point point-actif"></span>
+        {% elif equipement.etatLiaison == 'Maintenance' %}
+            <span class="point point-maintenance"></span>
+        {% else %}
+            <span class="point point-veille"></span>
+        {% endif %}
+        {{ equipement.etatLiaison }}
+    </div>
+
+    <div class="detail-ligne ip-bloc">
+        <i class="fa-solid fa-globe"></i>
+        <strong>IP :</strong>
+        <span class="ip-adresse">{{ equipement.ipv4 }}</span>
+        <a href="https://ping.pe/{{ equipement.ipv4 }}" target="_blank" class="btn-ping">
+            <i class="fa-solid fa-satellite-dish"></i> Ping
+        </a>
+    </div>
 
 </div>
-
-<a href="{{ url_for('index') }}">
-    ← Retour à la liste
-</a>
 
 {% endblock %}
