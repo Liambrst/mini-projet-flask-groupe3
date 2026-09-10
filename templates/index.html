@@ -4,12 +4,7 @@
 
 {% block content %}
 
-<h2>Liste des éléments</h2>
-
-<p>
-    Cette page présente les informations disponibles
-    dans l'application.
-</p>
+<h2>Inventaire réseau</h2>
 
 <div class="liste">
 
@@ -17,13 +12,22 @@
 
     <article class="carte">
 
-        <h3>{{ element.reference }}</h3>
+        <h3>{{ element.hostname }}</h3>
 
-        <p>{{ element.auteur }}</p>
+        <p><strong>Type :</strong> {{ element.natureEquipement }}</p>
+        <p><strong>Zone :</strong> {{ element.zoneTechnique }}</p>
+        <p><strong>Fabricant :</strong> {{ element.fabricant }}</p>
+        <p><strong>État :</strong> {{ element.etatLiaison }}</p>
 
-        <a href="{{ url_for('detail', id=element.id) }}">
-            Voir le détail
-        </a>
+        <p class="ip-bloc">
+            <strong>IP :</strong>
+            <span class="ip-adresse">{{ element.ipv4 }}</span>
+            <a href="https://ping.pe/{{ element.ipv4 }}" target="_blank" class="btn-ping">
+                Ping
+            </a>
+        </p>
+
+        <a href="{{ url_for('detail', id=element.id) }}">Voir le détail</a>
 
     </article>
 
