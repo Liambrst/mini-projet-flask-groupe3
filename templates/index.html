@@ -6,14 +6,16 @@
 
 <h2>Inventaire réseau</h2>
 
+<form method="GET" action="/" style="margin-bottom: 20px;">
+    <input type="text" name="recherche" placeholder="Rechercher une IP ou un nom..." value="{{ request.args.get('recherche', '') }}">
+    <button type="submit">Rechercher</button>
+    <a href="/">Réinitialiser</a>
+</form>
+
 <div class="liste">
-
-    {% for element in donnees %}
-
+    {% for element in equipements %}
     <article class="carte">
-
         <h3>{{ element.hostname }}</h3>
-
         <p><strong>Type :</strong> {{ element.natureEquipement }}</p>
         <p><strong>Zone :</strong> {{ element.zoneTechnique }}</p>
         <p><strong>Fabricant :</strong> {{ element.fabricant }}</p>
@@ -28,11 +30,10 @@
         </p>
 
         <a href="{{ url_for('detail', id=element.id) }}">Voir le détail</a>
-
     </article>
-
+    {% else %}
+        <p>Aucun équipement trouvé.</p>
     {% endfor %}
-
 </div>
 
 {% endblock %}
