@@ -4,47 +4,32 @@
 
 {% block content %}
 
-<h2><i class="fa-solid fa-network-wired"></i> Inventaire réseau</h2>
+<h2>Inventaire réseau</h2>
 
-<form method="GET" action="/">
+<form method="GET" action="/" style="margin-bottom: 20px;">
     <input type="text" name="recherche" placeholder="Rechercher une IP ou un nom..." value="{{ request.args.get('recherche', '') }}">
-    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> Rechercher</button>
-    <a href="/"><i class="fa-solid fa-rotate-left"></i> Réinitialiser</a>
+    <button type="submit">Rechercher</button>
+    <a href="/">Réinitialiser</a>
 </form>
 
 <div class="liste">
     {% for element in equipements %}
     <article class="carte">
-
-        <h3><i class="fa-solid fa-server"></i> {{ element.hostname }}</h3>
-
-        <p><i class="fa-solid fa-tag"></i> <strong>Type :</strong> {{ element.natureEquipement }}</p>
-        <p><i class="fa-solid fa-location-dot"></i> <strong>Zone :</strong> {{ element.zoneTechnique }}</p>
-        <p><i class="fa-solid fa-industry"></i> <strong>Fabricant :</strong> {{ element.fabricant }}</p>
-
-        <p class="etat-wrapper">
-            <strong>État :</strong>
-            {% if element.etatLiaison == 'Actif' %}
-                <span class="point point-actif"></span>
-            {% elif element.etatLiaison == 'Maintenance' %}
-                <span class="point point-maintenance"></span>
-            {% else %}
-                <span class="point point-veille"></span>
-            {% endif %}
-            {{ element.etatLiaison }}
-        </p>
+        <h3>{{ element.hostname }}</h3>
+        <p><strong>Type :</strong> {{ element.natureEquipement }}</p>
+        <p><strong>Zone :</strong> {{ element.zoneTechnique }}</p>
+        <p><strong>Fabricant :</strong> {{ element.fabricant }}</p>
+        <p><strong>État :</strong> {{ element.etatLiaison }}</p>
 
         <p class="ip-bloc">
-            <i class="fa-solid fa-globe"></i>
             <strong>IP :</strong>
             <span class="ip-adresse">{{ element.ipv4 }}</span>
             <a href="https://ping.pe/{{ element.ipv4 }}" target="_blank" class="btn-ping">
-                <i class="fa-solid fa-satellite-dish"></i> Ping
+                Ping
             </a>
         </p>
 
-        <a href="{{ url_for('detail', id=element.id) }}"><i class="fa-solid fa-arrow-right"></i> Voir le détail</a>
-
+        <a href="{{ url_for('detail', id=element.id) }}">Voir le détail</a>
     </article>
     {% else %}
         <p>Aucun équipement trouvé.</p>
