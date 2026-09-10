@@ -1,62 +1,92 @@
 [
-    {
-        "id": 101,
-        "reference": "RES-CCNA-01",
-        "titre": "Introduction aux réseaux informatiques",
-        "auteur": "Claire Martin",
-        "domaine": "Réseaux",
-        "anneePublication": 2023,
-        "disponibilite": "Disponible",
-        "rayon": "Réseaux - R01"
-    },
-    {
-        "id": 102,
-        "reference": "DEV-PY-02",
-        "titre": "Python pour les débutants",
-        "auteur": "Thomas Bernard",
-        "domaine": "Programmation",
-        "anneePublication": 2022,
-        "disponibilite": "Emprunté",
-        "rayon": "Développement - D03"
-    },
-    {
-        "id": 103,
-        "reference": "SEC-ISO-03",
-        "titre": "Les fondamentaux de la cybersécurité",
-        "auteur": "Sophie Durand",
-        "domaine": "Cybersécurité",
-        "anneePublication": 2024,
-        "disponibilite": "Disponible",
-        "rayon": "Sécurité - S02"
-    },
-    {
-        "id": 104,
-        "reference": "WEB-JS-04",
-        "titre": "Développer des applications web modernes",
-        "auteur": "Julien Moreau",
-        "domaine": "Développement web",
-        "anneePublication": 2021,
-        "disponibilite": "Réservé",
-        "rayon": "Web - W01"
-    },
-    {
-        "id": 105,
-        "reference": "SYS-LNX-05",
-        "titre": "Administrer un serveur Linux",
-        "auteur": "Nicolas Petit",
-        "domaine": "Systèmes",
-        "anneePublication": 2020,
-        "disponibilite": "Disponible",
-        "rayon": "Systèmes - S05"
-    },
-    {
-        "id": 106,
-        "reference": "BDD-SQL-06",
-        "titre": "SQL et conception de bases de données",
-        "auteur": "Émilie Robert",
-        "domaine": "Bases de données",
-        "anneePublication": 2023,
-        "disponibilite": "Indisponible",
-        "rayon": "Données - B02"
-    }
+  {
+    "id": 1,
+    "hostname": "CORE-SW-A",
+    "ipv4": "10.20.0.2",
+    "natureEquipement": "Switch cœur",
+    "zoneTechnique": "Baie RDC",
+    "etatLiaison": "Actif",
+    "fabricant": "Cisco"
+  },
+  {
+    "id": 2,
+    "hostname": "EDGE-RTR-01",
+    "ipv4": "10.20.0.1",
+    "natureEquipement": "Routeur",
+    "zoneTechnique": "Baie RDC",
+    "etatLiaison": "Actif",
+    "fabricant": "Cisco"
+  },
+  {
+    "id": 3,
+    "hostname": "WIFI-AP-01",
+    "ipv4": "10.20.10.21",
+    "natureEquipement": "Borne Wi-Fi",
+    "zoneTechnique": "Salle 101",
+    "etatLiaison": "Actif",
+    "fabricant": "Aruba"
+  },
+  {
+    "id": 4,
+    "hostname": "ACC-SW-02",
+    "ipv4": "10.20.0.12",
+    "natureEquipement": "Switch accès",
+    "zoneTechnique": "Baie étage 1",
+    "etatLiaison": "Maintenance",
+    "fabricant": "HPE"
+  },
+  {
+    "id": 5,
+    "hostname": "WIFI-AP-02",
+    "ipv4": "10.20.10.22",
+    "natureEquipement": "Borne Wi-Fi",
+    "zoneTechnique": "Salle 102",
+    "etatLiaison": "Actif",
+    "fabricant": "Aruba"
+  },
+  {
+    "id": 6,
+    "hostname": "ACC-SW-03",
+    "ipv4": "10.20.0.13",
+    "natureEquipement": "Switch accès",
+    "zoneTechnique": "Baie étage 2",
+    "etatLiaison": "Actif",
+    "fabricant": "HPE"
+  },
+  {
+    "id": 7,
+    "hostname": "RTR-SECOURS",
+    "ipv4": "10.20.0.254",
+    "natureEquipement": "Routeur",
+    "zoneTechnique": "Baie secours",
+    "etatLiaison": "Veille",
+    "fabricant": "Juniper"
+  },
+  {
+    "id": 8,
+    "hostname": "WIFI-AP-03",
+    "ipv4": "10.20.10.23",
+    "natureEquipement": "Borne Wi-Fi",
+    "zoneTechnique": "Salle 201",
+    "etatLiaison": "Actif",
+    "fabricant": "Cisco"
+  },
+  {
+    "id": 9,
+    "hostname": "DIST-SW-01",
+    "ipv4": "10.20.0.20",
+    "natureEquipement": "Switch distribution",
+    "zoneTechnique": "Baie étage 2",
+    "etatLiaison": "Actif",
+    "fabricant": "Cisco"
+  },
+  {
+    "id": 10,
+    "hostname": "WIFI-AP-04",
+    "ipv4": "10.20.10.24",
+    "natureEquipement": "Borne Wi-Fi",
+    "zoneTechnique": "Salle 202",
+    "etatLiaison": "Maintenance",
+    "fabricant": "Aruba"
+  }
 ]
