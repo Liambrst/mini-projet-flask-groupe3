@@ -16,6 +16,7 @@ def charger_donnees():
 # Route principale : Affichage de la liste et gestion du filtre
 @app.route('/')
 def index():
+feature-backend-complet
     equipements = charger_donnees()
     
     # 1. Récupération des paramètres tapés par l'utilisateur (méthode GET)
@@ -47,6 +48,11 @@ def detail(id):
     
     # Recherche de l'équipement spécifique grâce à son ID
     equipement_trouve = next((eq for eq in equipements if eq['id'] == id), None)
+
+    donnees = charger_donnees()
+# Récupération du paramètre de recherche dans l'URL
+    recherche = request.args.get("recherche")
+ main
     
     # Gestion de l'erreur si l'équipement n'existe pas
     if equipement_trouve is None:
