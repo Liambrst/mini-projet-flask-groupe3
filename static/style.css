@@ -53,3 +53,32 @@ footer {
     background-color: #004458;
     color: white;
 }
+
+.ip-bloc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.ip-adresse {
+    font-weight: bold;
+    color: #004458;
+    background-color: #e0f0f5;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.btn-ping {
+    background-color: #2563eb;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85em;
+}
+
+.btn-ping:hover {
+    background-color: #1d4ed8;
+}
