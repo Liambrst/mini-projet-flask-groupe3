@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>{% block title %}Application Flask{% endblock %}</title>
-
-    <link
-        rel="stylesheet"
-        href="{{ url_for('static', filename='style.css') }}"
-    >
-    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" style="height: 40px; vertical-align: middle;">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
 
 <header>
-    <h1>Mini-projet Flask TEST</h1>
-
-    <nav>
-        <a href="{{ url_for('index') }}">Accueil</a>
-    </nav>
+    <div class="header-inner">
+        <div class="header-logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo Carnus">
+            <h1>Inventaire Réseau</h1>
+        </div>
+        <nav>
+            <a href="{{ url_for('index') }}">Accueil</a>
+        </nav>
+    </div>
 </header>
 
 <main>
@@ -30,7 +27,7 @@
 </main>
 
 <footer>
-    <p>Mini-projet Python / Flask</p>
+    <p>Mini-projet Python / Flask — BTS CIEL</p>
 </footer>
 
 </body>
